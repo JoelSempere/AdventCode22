@@ -39,8 +39,4 @@ public class UtilsD6 {
         }
         return result;
     }
-   public static void main(String[] args) {
-       char[] allChars = {'m', 'q', 'v', 'q'};
-
-   }
 }
