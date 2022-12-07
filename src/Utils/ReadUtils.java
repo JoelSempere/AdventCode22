@@ -2,6 +2,8 @@ package Utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ReadUtils {
@@ -13,5 +15,14 @@ public class ReadUtils {
             sb.append(sc.nextLine());
         }
         return sb.toString();
+    }
+
+    public static List<String> getList(File f) throws FileNotFoundException {
+        Scanner sc = new Scanner(f);
+        List<String> lines = new ArrayList<>();
+        while (sc.hasNextLine()) {
+            lines.add(sc.nextLine());
+        }
+        return lines;
     }
 }
