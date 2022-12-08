@@ -25,4 +25,32 @@ public class ReadUtils {
         }
         return lines;
     }
+
+    public static List<List<Character>> getCharacterMatrix(File f) throws FileNotFoundException {
+        Scanner sc = new Scanner(f);
+        List<List<Character>> charsList = new ArrayList<>();
+
+        while (sc.hasNextLine()) {
+            List<Character> chars = new ArrayList<>();
+            for (Character c : sc.nextLine().toCharArray()) {
+                chars.add(c);
+            }
+            charsList.add(chars);
+        }
+        return charsList;
+    }
+
+    public static List<List<Integer>> getNumberMatrix(File f) throws FileNotFoundException {
+        Scanner sc = new Scanner(f);
+        List<List<Integer>> numsList = new ArrayList<>();
+
+        while (sc.hasNextLine()) {
+            List<Integer> ints = new ArrayList<>();
+            for (Character c : sc.nextLine().toCharArray()) {
+                ints.add(Integer.parseInt(String.valueOf(c)));
+            }
+            numsList.add(ints);
+        }
+        return numsList;
+    }
 }
