@@ -26,7 +26,6 @@ public class Day10 {
                 valueX += number;
             }
             position++;
-
         }
 
         List<Cycle> selectedCycles = new ArrayList<>();
